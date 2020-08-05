@@ -2,14 +2,48 @@ namespace InternshipTest.Person
 {
     public class Student
     {
+        string name;
+        Knowledge knowledge;
+        public Student(string name, Knowledge knowledge)
+        {
+            this.name = name;
+            this.knowledge = knowledge;
+        }
         public Student(string name)
         {
-            //TODO: Implementation is needed
+            this.name = name;
         }
 
-        public void SetKnowledge(Knowledge knowledge)
+        public string Name
         {
-            //TODO: Implementation is needed
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
         }
+
+        public Knowledge Knowledge
+        {
+            get
+            {
+                return knowledge;
+            }
+            set
+            {
+                knowledge = value;
+            }
+
+        }
+
+        public void SetKnowledge(Knowledge knowledge) // we can set knowlege with this function after object creation
+        {
+            this.knowledge = knowledge;
+        }
+
+
     }
 }
